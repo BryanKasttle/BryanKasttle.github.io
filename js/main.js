@@ -45,9 +45,9 @@
           <div class="text-sm text-text3">
             Hecho para construir conocimiento, no para coleccionar pestañas.
             <span class="hidden sm:inline">•</span>
-            <a class="hover:text-primary-600" href="/privacy.html">Privacy</a>
+            <a class="hover:text-primary-600" href="/privacy">Privacy</a>
             <span>•</span>
-            <a class="hover:text-primary-600" href="/terms.html">Terms</a>
+            <a class="hover:text-primary-600" href="/terms">Terms</a>
           </div>
         </div>
       </footer>
