@@ -9,11 +9,8 @@
       <header class="mx-auto max-w-6xl px-6 pt-6">
         <nav class="card rounded-2xl px-4 sm:px-5 py-3 flex items-center justify-between gap-4">
           <a href="/index.html" class="flex items-center gap-3 min-w-0">
-            <div class="h-9 w-9 rounded-xl bg-primary-100 stroke flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M12 3l8 4v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z" stroke="#3B4BFF" stroke-width="1.6"/>
-                <path d="M8.5 12.2l2.4 2.4 4.8-5.2" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+            <div class="h-9 w-9 rounded-xl overflow-hidden stroke bg-primary-100">
+              <img src="/assets/icons/favicon.png" alt="Vault icon" class="h-full w-full object-cover" onerror="this.onerror=null;this.src='/assets/icons/favicon.svg';" />
             </div>
             <div class="leading-tight min-w-0">
               <div class="font-semibold tracking-tight text-text">Vault</div>
