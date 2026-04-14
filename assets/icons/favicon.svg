@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Vault Icon</title>
+  <desc id="desc">Rounded blue square with stylized V mark</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06245f"/>
+      <stop offset="100%" stop-color="#0d4da1"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vleft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f1f5ff"/>
+      <stop offset="70%" stop-color="#9ab2da"/>
+      <stop offset="100%" stop-color="#2f61bb"/>
+    </linearGradient>
+    <linearGradient id="tip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7dd8ff"/>
+      <stop offset="100%" stop-color="#2f7ddc"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="496" height="496" rx="96" fill="url(#bg)"/>
+  <rect x="8" y="8" width="496" height="220" rx="96" fill="url(#shine)"/>
+
+  <g>
+    <path d="M76 138h105l186 278-72 0z" fill="#dfe5f1"/>
+    <path d="M96 152h73l170 252-46 0z" fill="url(#vleft)"/>
+    <path d="M264 368l75 36-46 0z" fill="url(#tip)"/>
+
+    <path d="M318 142h120l-88 190-66-98z" fill="#d9dfea"/>
+    <path d="M332 152h95l-75 161-48-72z" fill="#c8d1dd"/>
+  </g>
+
+  <rect x="10" y="10" width="492" height="492" rx="95" fill="none" stroke="#9ec4ff" stroke-opacity="0.45" stroke-width="4"/>
+</svg>
