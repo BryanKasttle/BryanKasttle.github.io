@@ -10,7 +10,9 @@
         <nav class="card rounded-2xl px-4 sm:px-5 py-3 flex items-center justify-between gap-4">
           <a href="/index.html" class="flex items-center gap-3 min-w-0">
             <div class="h-9 w-9 rounded-xl overflow-hidden stroke bg-primary-100">
+
               <img src="/assets/icons/favicon.png" alt="Vault icon" class="h-full w-full object-cover" onerror="this.onerror=null;this.src='/assets/icons/favicon.svg';" />
+
             </div>
             <div class="leading-tight min-w-0">
               <div class="font-semibold tracking-tight text-text">Vault</div>
