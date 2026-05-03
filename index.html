@@ -12,125 +12,34 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/main.js" defer></script>
 </head>
-<body>
+<body data-title-key="metaTitleHome" data-description-key="metaDescriptionHome">
   <header class="site-header">
     <nav class="nav shell glass">
-      <a class="brand" href="/index.html" aria-label="Vault inicio">
-        <img src="/assets/icons/favicon.png" alt="" />
-        <span><strong>Vault</strong><small>Tu memoria inteligente</small></span>
-      </a>
-      <div class="nav-links">
-        <a href="#capture">Captura</a>
-        <a href="#library">Biblioteca</a>
-        <a href="#ai">Vault AI</a>
-        <a href="/support.html">Soporte</a>
-      </div>
-      <a class="nav-cta" href="#app-store">Próximamente</a>
+      <a class="brand" href="/index.html" aria-label="Vault inicio"><img src="/assets/icons/favicon.png" alt="" /><span><strong>Vault</strong><small data-i18n="brandSubtitle">Tu memoria inteligente</small></span></a>
+      <div class="nav-links"><a href="#capture" data-i18n="navCapture">Captura</a><a href="#library" data-i18n="navLibrary">Biblioteca</a><a href="#ai" data-i18n="navAI">Vault AI</a><a href="/support.html" data-i18n="navSupport">Soporte</a></div>
+      <a class="nav-cta" href="#app-store" data-i18n="navSoon">Próximamente</a>
     </nav>
   </header>
-
   <main>
     <section class="hero shell">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Vault AI conectado a tu bóveda</p>
-        <h1>Tu memoria inteligente para todo lo que guardas en internet.</h1>
-        <p class="lead">Guarda enlaces, archivos, audios y notas. Vault los organiza, resume, traduce y compara con tus categorías para que encuentres lo importante cuando lo necesites.</p>
-        <div class="hero-actions">
-          <a class="primary-btn" href="#app-store">Próximamente en la App Store</a>
-          <a class="secondary-btn" href="#library">Ver cómo funciona</a>
-        </div>
-        <div class="stats">
-          <div><strong>4</strong><span>formas de guardar</span></div>
-          <div><strong>IA</strong><span>clasifica y compara</span></div>
-          <div><strong>∞</strong><span>categorías propias</span></div>
-        </div>
+        <p class="eyebrow"><span></span> <span data-i18n="heroBadge">Vault AI conectado a tu bóveda</span></p>
+        <h1 data-i18n="heroTitle">Tu memoria inteligente para todo lo que guardas en internet.</h1>
+        <p class="lead" data-i18n="heroLead">Guarda enlaces, archivos, audios y notas. Vault los organiza, resume, traduce y compara con tus categorías para que encuentres lo importante cuando lo necesites.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#app-store" data-i18n="appStoreSoon">Próximamente en la App Store</a><a class="secondary-btn" href="#library" data-i18n="seeHow">Ver cómo funciona</a></div>
+        <div class="stats"><div><strong>4</strong><span data-i18n="statWays">formas de guardar</span></div><div><strong>IA</strong><span data-i18n="statAI">clasifica y compara</span></div><div><strong>∞</strong><span data-i18n="statCategories">categorías propias</span></div></div>
       </div>
-
       <div class="hero-visual" aria-hidden="true">
-        <div class="phone phone-front">
-          <div class="phone-top"><span>11:29</span><span>Wi‑Fi 80</span></div>
-          <div class="mini-app-head"><img src="/assets/icons/favicon.png" alt="" /><div><b>Vault</b><small>Captura y guarda en segundos</small></div><em>PRO</em></div>
-          <h3>Crear/Guardar</h3>
-          <div class="pills"><span class="on">Enlace</span><span>Archivo</span><span>Texto</span><span>Audio</span></div>
-          <div class="input-card">Pega aquí un enlace para guardar</div>
-          <div class="save-btn">Almacenar</div>
-          <div class="note-preview"><small>Lectura</small><h4>Salmón en costra con puré verde</h4><p>Ingredientes</p><ul><li>1 cebolla grande</li><li>70 g de mantequilla</li><li>2 dientes de ajo</li></ul></div>
-        </div>
-        <div class="floating-card category-card"><b>Categoría personalizada</b><span>Mis Frases</span><p>La IA compara lo guardado con tu descripción: frases de vida, lecciones y mensajes que quieres recordar.</p></div>
+        <div class="phone phone-front"><div class="phone-top"><span>11:29</span><span>Wi‑Fi 80</span></div><div class="mini-app-head"><img src="/assets/icons/favicon.png" alt="" /><div><b>Vault</b><small data-i18n="phoneSubtitle">Captura y guarda en segundos</small></div><em>PRO</em></div><h3 data-i18n="phoneCreate">Crear/Guardar</h3><div class="pills"><span class="on" data-i18n="tabLink">Enlace</span><span data-i18n="tabFile">Archivo</span><span data-i18n="tabText">Texto</span><span data-i18n="tabAudio">Audio</span></div><div class="input-card" data-i18n="inputLink">Pega aquí un enlace para guardar</div><div class="save-btn" data-i18n="saveButton">Almacenar</div><div class="note-preview"><small data-i18n="noteType">Lectura</small><h4 data-i18n="noteTitle">Salmón en costra con puré verde</h4><p data-i18n="ingredients">Ingredientes</p><ul><li data-i18n="ingredient1">1 cebolla grande</li><li data-i18n="ingredient2">70 g de mantequilla</li><li data-i18n="ingredient3">2 dientes de ajo</li></ul></div></div>
+        <div class="floating-card category-card"><b data-i18n="customCategory">Categoría personalizada</b><span data-i18n="myPhrases">Mis Frases</span><p data-i18n="floatingDesc">La IA compara lo guardado con tu descripción: frases de vida, lecciones y mensajes que quieres recordar.</p></div>
       </div>
     </section>
-
-    <section id="capture" class="section shell">
-      <p class="kicker">Captura en segundos</p>
-      <div class="section-head"><h2>Todo entra a Vault sin fricción.</h2><p>Comparte, pega, sube o dicta. Vault guarda primero y procesa después para que no pierdas una idea, receta, video o documento.</p></div>
-      <div class="feature-grid">
-        <article class="glass feature"><span>🔗</span><h3>Enlaces</h3><p>Guarda contenido de internet antes de que se pierda entre pestañas.</p></article>
-        <article class="glass feature"><span>▱</span><h3>Archivos</h3><p>PDFs, imágenes y documentos listos para lectura y búsqueda.</p></article>
-        <article class="glass feature"><span>✎</span><h3>Texto</h3><p>Notas rápidas, ideas, frases y pendientes con estructura limpia.</p></article>
-        <article class="glass feature"><span>🎙</span><h3>Audio</h3><p>Convierte voz y audios largos en texto consultable.</p></article>
-      </div>
-    </section>
-
-    <section id="library" class="section shell split">
-      <div>
-        <p class="kicker">Biblioteca inteligente</p>
-        <h2>Crea categorías a tu manera. Vault hace el resto.</h2>
-        <p class="section-text">Además de las categorías generales, puedes crear categorías personalizadas con una descripción. La IA compara cada cosa que guardas contra esas descripciones y decide dónde encaja mejor.</p>
-        <div class="examples">
-          <div>Mis Frases <small>Todo lo que tenga que ver con frases de vida, lecciones y mensajes importantes.</small></div>
-          <div>Vivir mejor <small>Disciplina, bienestar, salud y mentalidad.</small></div>
-          <div>Mixología <small>Cócteles, bebidas, preparación y maridajes.</small></div>
-        </div>
-      </div>
-      <div class="library-board glass">
-        <article class="wide"><b>IA</b><h3>Categoría personalizada</h3><p>Escribe una descripción y Vault la usa como criterio para clasificar lo nuevo.</p></article>
-        <article><b>12</b><h3>Mis Frases</h3><p>Frases de vida y lecciones.</p></article>
-        <article><b>14</b><h3>Vivir mejor</h3><p>Disciplina y salud.</p></article>
-        <article><b>5</b><h3>Mixología</h3><p>Bebidas y recetas.</p></article>
-        <article><b>3</b><h3>Finanzas</h3><p>Dinero y negocios.</p></article>
-      </div>
-    </section>
-
-    <section id="ai" class="section shell ai-panel glass">
-      <div>
-        <p class="kicker">Vault AI</p>
-        <h2>Pregúntale a tu propia bóveda.</h2>
-        <p class="section-text">Vault busca en tus textos, entiende tus categorías y te responde con el contexto que ya guardaste.</p>
-        <div class="examples"><div>¿Qué recetas guardé con salmón?</div><div>¿Qué hay en mi categoría Mis Frases?</div><div>¿Por qué esto se clasificó como Vivir mejor?</div></div>
-      </div>
-      <div class="chat-demo">
-        <div class="chat-title"><img src="/assets/icons/favicon.png" alt="" /><span><b>Vault AI</b><small>Conectado a tu bóveda</small></span></div>
-        <p class="bubble ai">Pregúntame algo sobre lo que ya guardaste.</p>
-        <p class="bubble user">¿Qué recetas tengo con salmón?</p>
-        <p class="bubble ai">Encontré una receta de salmón en costra con puré verde y otra nota guardada sobre crispy rice con salmón. Puedo abrirlas, resumirlas o guardar una conclusión nueva.</p>
-      </div>
-    </section>
-
-    <section class="section shell split read-section">
-      <div>
-        <p class="kicker">Lee mejor</p>
-        <h2>Resumen, traducción y original en el mismo lugar.</h2>
-        <p class="section-text">Cuando abres una nota, Vault te deja alternar entre IA, resumen y texto original. También puedes traducir, copiar, compartir y volver a la fuente.</p>
-      </div>
-      <div class="reader glass">
-        <div class="reader-tools"><span>Traducir</span><span>Ver original</span><span>Compartir</span></div>
-        <div class="segment"><b>IA</b><span>Resumen</span><span>Original</span></div>
-        <h3>Crispy Sushi Rice with Spicy Tuna Tartar</h3>
-        <h4>Ingredients</h4>
-        <p>• Cooked rice (sushi style)</p><p>• Fresh tuna</p><p>• Soy sauce, mayonnaise and sriracha</p>
-      </div>
-    </section>
-
-    <section id="app-store" class="cta shell glass">
-      <img src="/assets/icons/favicon.png" alt="Vault" />
-      <h2>Próximamente en la App Store.</h2>
-      <p>Vault está hecho para guardar lo importante antes de que internet se lo lleve: enlaces, notas, audios y archivos, ordenados con IA en categorías generales o en las que tú mismo crees.</p>
-      <a class="primary-btn disabled" aria-disabled="true">Próximamente en la App Store</a>
-    </section>
+    <section id="capture" class="section shell"><p class="kicker" data-i18n="captureKicker">Captura en segundos</p><div class="section-head"><h2 data-i18n="captureTitle">Todo entra a Vault sin fricción.</h2><p data-i18n="captureDesc">Comparte, pega, sube o dicta. Vault guarda primero y procesa después para que no pierdas una idea, receta, video o documento.</p></div><div class="feature-grid"><article class="glass feature"><span>🔗</span><h3 data-i18n="linksTitle">Enlaces</h3><p data-i18n="linksDesc">Guarda contenido de internet antes de que se pierda entre pestañas.</p></article><article class="glass feature"><span>▱</span><h3 data-i18n="filesTitle">Archivos</h3><p data-i18n="filesDesc">PDFs, imágenes y documentos listos para lectura y búsqueda.</p></article><article class="glass feature"><span>✎</span><h3 data-i18n="textTitle">Texto</h3><p data-i18n="textDesc">Notas rápidas, ideas, frases y pendientes con estructura limpia.</p></article><article class="glass feature"><span>🎙</span><h3 data-i18n="audioTitle">Audio</h3><p data-i18n="audioDesc">Convierte voz y audios largos en texto consultable.</p></article></div></section>
+    <section id="library" class="section shell split"><div><p class="kicker" data-i18n="libraryKicker">Biblioteca inteligente</p><h2 data-i18n="libraryTitle">Crea categorías a tu manera. Vault hace el resto.</h2><p class="section-text" data-i18n="libraryDesc">Además de las categorías generales, puedes crear categorías personalizadas con una descripción. La IA compara cada cosa que guardas contra esas descripciones y decide dónde encaja mejor.</p><div class="examples"><div><span data-i18n="myPhrases">Mis Frases</span> <small data-i18n="examplePhrasesDesc">Todo lo que tenga que ver con frases de vida, lecciones y mensajes importantes.</small></div><div><span data-i18n="exampleBetter">Vivir mejor</span> <small data-i18n="exampleBetterDesc">Disciplina, bienestar, salud y mentalidad.</small></div><div><span data-i18n="exampleMixology">Mixología</span> <small data-i18n="exampleMixologyDesc">Cócteles, bebidas, preparación y maridajes.</small></div></div></div><div class="library-board glass"><article class="wide"><b>IA</b><h3 data-i18n="customCategory">Categoría personalizada</h3><p data-i18n="boardCustomDesc">Escribe una descripción y Vault la usa como criterio para clasificar lo nuevo.</p></article><article><b>12</b><h3 data-i18n="myPhrases">Mis Frases</h3><p data-i18n="boardPhrasesDesc">Frases de vida y lecciones.</p></article><article><b>14</b><h3 data-i18n="exampleBetter">Vivir mejor</h3><p data-i18n="boardBetterDesc">Disciplina y salud.</p></article><article><b>5</b><h3 data-i18n="exampleMixology">Mixología</h3><p data-i18n="boardMixologyDesc">Bebidas y recetas.</p></article><article><b>3</b><h3 data-i18n="boardFinance">Finanzas</h3><p data-i18n="boardFinanceDesc">Dinero y negocios.</p></article></div></section>
+    <section id="ai" class="section shell ai-panel glass"><div><p class="kicker" data-i18n="navAI">Vault AI</p><h2 data-i18n="aiTitle">Pregúntale a tu propia bóveda.</h2><p class="section-text" data-i18n="aiDesc">Vault busca en tus textos, entiende tus categorías y te responde con el contexto que ya guardaste.</p><div class="examples"><div data-i18n="qSalmon">¿Qué recetas guardé con salmón?</div><div data-i18n="qPhrases">¿Qué hay en mi categoría Mis Frases?</div><div data-i18n="qBetter">¿Por qué esto se clasificó como Vivir mejor?</div></div></div><div class="chat-demo"><div class="chat-title"><img src="/assets/icons/favicon.png" alt="" /><span><b>Vault AI</b><small data-i18n="heroBadge">Conectado a tu bóveda</small></span></div><p class="bubble ai" data-i18n="chatIntro">Pregúntame algo sobre lo que ya guardaste.</p><p class="bubble user" data-i18n="chatUserSalmon">¿Qué recetas tengo con salmón?</p><p class="bubble ai" data-i18n="chatAnswerSalmon">Encontré una receta de salmón en costra con puré verde y otra nota guardada sobre crispy rice con salmón. Puedo abrirlas, resumirlas o guardar una conclusión nueva.</p></div></section>
+    <section class="section shell split read-section"><div><p class="kicker" data-i18n="readKicker">Lee mejor</p><h2 data-i18n="readTitle">Resumen, traducción y original en el mismo lugar.</h2><p class="section-text" data-i18n="readDesc">Cuando abres una nota, Vault te deja alternar entre IA, resumen y texto original. También puedes traducir, copiar, compartir y volver a la fuente.</p></div><div class="reader glass"><div class="reader-tools"><span data-i18n="translate">Traducir</span><span data-i18n="viewOriginal">Ver original</span><span data-i18n="share">Compartir</span></div><div class="segment"><b>IA</b><span data-i18n="summary">Resumen</span><span data-i18n="original">Original</span></div><h3>Crispy Sushi Rice with Spicy Tuna Tartar</h3><h4>Ingredients</h4><p>• Cooked rice (sushi style)</p><p>• Fresh tuna</p><p>• Soy sauce, mayonnaise and sriracha</p></div></section>
+    <section id="app-store" class="cta shell glass"><img src="/assets/icons/favicon.png" alt="Vault" /><h2 data-i18n="ctaTitle">Próximamente en la App Store.</h2><p data-i18n="ctaDesc">Vault está hecho para guardar lo importante antes de que internet se lo lleve: enlaces, notas, audios y archivos, ordenados con IA en categorías generales o en las que tú mismo crees.</p><a class="primary-btn disabled" aria-disabled="true" data-i18n="appStoreSoon">Próximamente en la App Store</a></section>
   </main>
-
-  <footer class="footer">
-    <div class="shell footer-inner"><span>© <span id="year"></span> Vault. All rights reserved.</span><span><a href="/support.html">Soporte</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span></div>
-  </footer>
+  <footer class="footer"><div class="shell footer-inner"><span>© <span id="year"></span> Vault. All rights reserved.</span><span><a href="/support.html" data-i18n="footerSupport">Soporte</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span></div></footer>
 </body>
 </html>
