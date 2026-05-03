@@ -3,357 +3,44 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vault — Build knowledge, your way</title>
-  <meta name="description" content="Guarda links, PDFs, audios y notas. Transcribe, resume y organiza tu conocimiento. Siempre sincronizado. También funciona offline." />
-  <meta name="theme-color" content="#0d4da1" />
+  <title>Vault — Tu memoria inteligente</title>
+  <meta name="description" content="Guarda enlaces, archivos, audios y textos. Vault los organiza, resume, traduce y te permite preguntarle a tu propia bóveda con IA." />
+  <meta name="theme-color" content="#F8FBFF" />
+  <link rel="icon" type="image/png" href="/assets/icons/favicon.png" />
   <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/icons/favicon.svg" />
-  <link rel="apple-touch-icon" href="/assets/icons/favicon.svg" />
-
+  <link rel="shortcut icon" href="/assets/icons/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/favicon.png" />
   <script>
-    tailwind = {
-      config: {
-        theme: {
-          extend: {
-            colors: {
-              vaultbg: '#F7F8FA',
-              surface: '#FFFFFF',
-              border: '#E6E8EC',
-              text: '#111827',
-              text2: '#374151',
-              text3: '#6B7280',
-              primary: {
-                100: '#E9EEFF',
-                500: '#4F7CFF',
-                600: '#3B4BFF'
-              },
-              violet: {
-                100: '#F3E8FF',
-                600: '#7C3AED'
-              },
-              success: {
-                100: '#DCFCE7',
-                600: '#22C55E'
-              }
-            },
-            fontFamily: {
-              sans: ["ui-sans-serif", "system-ui", "-apple-system", "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"]
-            },
-            boxShadow: {
-              soft: '0 10px 30px rgba(17,24,39,.07)',
-              glow: '0 0 0 1px rgba(59,75,255,.20), 0 16px 40px rgba(59,75,255,.14)'
-            }
-          }
-        }
-      }
-    };
+    tailwind = { config: { theme: { extend: { colors: { vaultbg:'#F8FBFF', mist:'#EEF7FF', surface:'rgba(255,255,255,.74)', border:'rgba(120,160,200,.22)', text:'#1C1C1E', text2:'#4B4B52', text3:'#7A7A80', primary:{100:'#EAF5FF',300:'#A8D4F7',500:'#3D9DF2',600:'#2C82DC'}, aqua:'#37B6C7', mint:'#45C774', rose:'#FF6F82' }, fontFamily:{ sans:["ui-sans-serif","system-ui","-apple-system","BlinkMacSystemFont","SF Pro Display","SF Pro Text","Inter","Segoe UI","Roboto","Helvetica Neue","Arial","sans-serif"] }, boxShadow:{ glass:'0 24px 70px rgba(34,77,120,.12)', soft:'0 12px 34px rgba(28,28,30,.08)', glow:'0 18px 50px rgba(61,157,242,.25)' } } } } };
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/main.js" defer></script>
 </head>
 <body data-page="home" class="bg-vaultbg text-text selection:bg-primary-100 selection:text-text">
-  <div class="fixed inset-0 -z-10 noise"></div>
-  <div class="fixed inset-0 -z-10 gridlines opacity-70"></div>
-
+  <div class="fixed inset-0 -z-10 aurora-bg"></div><div class="fixed inset-0 -z-10 soft-grid opacity-70"></div>
   <div id="site-header"></div>
-
-  <main class="mx-auto max-w-6xl px-6 pt-14 pb-10">
-    <section class="grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs stroke bg-surface text-text2">
-          <span class="h-1.5 w-1.5 rounded-full bg-success-600"></span>
-          MVP listo para pruebas • API responsiva • Procesamiento en background
-        </div>
-        <h1 class="mt-6 text-4xl sm:text-5xl font-semibold tracking-tight text-text">
-          Guarda cualquier cosa.
-          <span class="text-text2">Convierte el caos en conocimiento.</span>
-        </h1>
-        <p class="mt-5 text-lg text-text2 leading-relaxed">
-          Vault captura links, PDFs, imágenes, audios y notas. Luego transcribe, resume y organiza.
-          Tu contenido vive en la nube, pero también se siente <span class="text-text font-medium">instantáneo</span> en tus dispositivos.
-        </p>
-
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="#waitlist" class="inline-flex justify-center items-center rounded-2xl px-5 py-3 font-semibold bg-primary-600 hover:bg-primary-500 text-white shadow-glow">Pedir acceso</a>
-          <a href="#features" class="inline-flex justify-center items-center rounded-2xl px-5 py-3 stroke bg-surface hover:bg-primary-100 text-text">Ver features</a>
-        </div>
-
-        <div class="mt-8 grid grid-cols-3 gap-4">
-          <div class="card rounded-2xl p-4">
-            <div class="text-sm text-text3">Tiempo a guardar</div>
-            <div class="mt-1 text-2xl font-semibold text-text">&lt; 5s</div>
-          </div>
-          <div class="card rounded-2xl p-4">
-            <div class="text-sm text-text3">Offline</div>
-            <div class="mt-1 text-2xl font-semibold text-text">Sí</div>
-          </div>
-          <div class="card rounded-2xl p-4">
-            <div class="text-sm text-text3">Privacidad</div>
-            <div class="mt-1 text-2xl font-semibold text-text">Tuya</div>
-          </div>
-        </div>
+  <main class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 pt-12 pb-12">
+    <section class="relative grid lg:grid-cols-[1.02fr_.98fr] gap-10 lg:gap-14 items-center min-h-[calc(100vh-120px)]">
+      <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-sm glass-pill text-text2"><span class="h-2 w-2 rounded-full bg-mint shadow-[0_0_0_5px_rgba(69,199,116,.16)]"></span>Vault AI conectado a tu bóveda</div>
+        <h1 class="mt-7 max-w-3xl text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-[-0.055em] leading-[.95] text-text">Tu memoria inteligente para todo lo que guardas en internet.</h1>
+        <p class="mt-6 max-w-2xl text-lg sm:text-xl text-text2 leading-relaxed">Guarda enlaces, archivos, audios y notas. Vault los organiza, resume, traduce y te permite preguntarle a tu propia bóveda con IA.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3"><a href="#waitlist" class="inline-flex justify-center items-center rounded-[1.35rem] px-6 py-3.5 font-semibold bg-primary-500 hover:bg-primary-600 text-white shadow-glow transition">Descargar en App Store</a><a href="#how" class="inline-flex justify-center items-center rounded-[1.35rem] px-6 py-3.5 font-semibold glass-button text-text hover:-translate-y-0.5 transition">Ver cómo funciona</a></div>
+        <div class="mt-9 grid grid-cols-3 gap-3 max-w-xl"><div class="mini-stat"><div class="text-2xl font-semibold">4</div><div class="text-xs text-text3">formas de guardar</div></div><div class="mini-stat"><div class="text-2xl font-semibold">IA</div><div class="text-xs text-text3">chat y resumen</div></div><div class="mini-stat"><div class="text-2xl font-semibold">∞</div><div class="text-xs text-text3">memoria útil</div></div></div>
       </div>
-
-      <div class="shine card rounded-3xl p-6 shadow-soft">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <div class="h-2.5 w-2.5 rounded-full bg-border"></div>
-            <div class="h-2.5 w-2.5 rounded-full bg-border"></div>
-            <div class="h-2.5 w-2.5 rounded-full bg-border"></div>
-          </div>
-          <div class="text-xs text-text3">Vault • Preview</div>
-        </div>
-
-        <div class="mt-6 grid gap-3">
-          <div class="card rounded-2xl p-4">
-            <div class="flex items-center justify-between">
-              <div class="text-sm font-semibold text-text">YouTube — charla de liderazgo</div>
-              <div class="text-xs text-text3">Procesando…</div>
-            </div>
-            <div class="mt-2 h-2 rounded-full progress-track overflow-hidden">
-              <div class="h-full w-2/3 bg-primary-500/90"></div>
-            </div>
-            <div class="mt-3 text-sm text-text2">Resumen, tags y puntos clave aparecerán aquí.</div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-3">
-            <div class="card rounded-2xl p-4">
-              <div class="text-xs text-text3">PDF</div>
-              <div class="mt-1 font-semibold text-text">La esencia del liderazgo</div>
-              <div class="mt-2 text-sm text-text2">Texto extraído + búsqueda local.</div>
-            </div>
-            <div class="card rounded-2xl p-4">
-              <div class="text-xs text-text3">Nota</div>
-              <div class="mt-1 font-semibold text-text">Ideas de producto</div>
-              <div class="mt-2 text-sm text-text2">Captura rápida desde Share.</div>
-            </div>
-          </div>
-
-          <div class="card rounded-2xl p-4">
-            <div class="text-xs text-text3">Transcripción</div>
-            <div class="mt-1 text-sm text-text2 leading-relaxed">
-              “La diferencia entre ruido y señal… es decisión. Lo que eliges guardar es lo que te construye.”
-            </div>
-            <div class="mt-3 flex gap-2">
-              <span class="text-xs px-2 py-1 rounded-full demo-chip">Resumen</span>
-              <span class="text-xs px-2 py-1 rounded-full demo-chip">Traducción</span>
-              <span class="text-xs px-2 py-1 rounded-full demo-chip">Tags</span>
-            </div>
-          </div>
-        </div>
+      <div class="relative min-h-[680px] lg:min-h-[760px] hidden sm:block">
+        <div class="phone phone-main"><div class="phone-screen"><div class="ios-time">11:29 <span>▮▮▮ Wi‑Fi 80</span></div><div class="app-header"><img src="/assets/icons/favicon.png" alt="Vault" /><div><strong>Vault</strong><p>Captura y guarda en segundos</p></div><span class="pro-pill">✦ PRO</span></div><h3 class="screen-title">Crear/Guardar</h3><div class="capture-tabs"><span class="active">🔗 Enlace</span><span>□ Archivo</span><span>✎ Texto</span><span>🎙 Audio</span></div><div class="input-mock">Pega aquí un enlace para guardar</div><div class="store-button">Almacenar</div><div class="last-file">Último archivo <a>Abrir</a></div><div class="note-card"><div class="tiny-label">▤ Lectura</div><h4>Salmón en costra con puré verde para una cena especial</h4><h5>Ingredientes</h5><p>• 1 cebolla grande</p><p>• 70 g de mantequilla</p><p>• 2 dientes de ajo</p><p>• 400 g de arvejas congeladas</p></div><div class="tabbar"><span class="on">⌂<small>Almacenar</small></span><span>▰<small>Chat</small></span><span>▱<small>Bóveda</small></span><span>⌕</span></div></div></div>
+        <div class="phone phone-back phone-library"><div class="phone-screen small-screen"><div class="ios-time">11:08 <span>▮▮▮ Wi‑Fi 85</span></div><div class="library-top"><h3>Biblioteca</h3><p>Todo lo importante, ordenado por contexto</p></div><div class="library-card big"><span>▦</span><b>130</b><h4>Todos</h4><p>Todo lo guardado en tu bóveda.</p></div><div class="library-grid"><div><b>7</b><h4>LifeStyle</h4><p>Consejos de vida y bienestar...</p></div><div><b>14</b><h4>Vivir mejor</h4><p>Disciplina, salud, mentalidad...</p></div><div><b>5</b><h4>Mixología</h4><p>Cócteles, bebidas...</p></div><div><b>3</b><h4>Finanzas</h4><p>Dinero y negocios...</p></div></div></div></div>
+        <div class="chat-bubble-mock"><div class="spark">✦</div><p>Pregúntame algo sobre lo que ya guardaste. Puedo buscar en tus textos y ayudarte a guardar la conclusión.</p></div>
       </div>
     </section>
-
-    <section id="share-magic" class="mt-16">
-      <div class="max-w-3xl">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-text">Así se ve cuando compartes un video</h2>
-        <p class="mt-3 text-text2">El texto se queda igual. Solo lo ordenamos para que se lea increíble.</p>
-      </div>
-
-      <div class="mt-8 card rounded-[24px] p-5 sm:p-7">
-        <div class="grid lg:grid-cols-3 gap-4">
-          <article class="card rounded-2xl p-4">
-            <div class="text-xs text-primary-600 font-semibold uppercase tracking-wide">Paso 1</div>
-            <h3 class="mt-2 font-semibold text-text">Compartir</h3>
-            <p class="mt-2 text-sm text-text2">Desde Share Extension o pegando un link. También funciona con PDF.</p>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <span class="demo-chip text-xs rounded-full px-2.5 py-1">YouTube</span>
-              <span class="demo-chip text-xs rounded-full px-2.5 py-1">Instagram</span>
-              <span class="demo-chip text-xs rounded-full px-2.5 py-1">PDF</span>
-            </div>
-          </article>
-
-          <article class="card rounded-2xl p-4">
-            <div class="text-xs text-primary-600 font-semibold uppercase tracking-wide">Paso 2</div>
-            <h3 class="mt-2 font-semibold text-text">Procesando</h3>
-            <p class="mt-2 text-sm text-text2">Extraemos audio, texto y descripción para prepararlo sin cambiar palabras.</p>
-            <div class="mt-3 h-2 rounded-full progress-track overflow-hidden" aria-hidden="true">
-              <div class="h-full progress-bar rounded-full"></div>
-            </div>
-            <div class="mt-3 flex flex-wrap gap-2">
-              <span class="demo-chip is-active text-xs rounded-full px-2.5 py-1">OCR</span>
-              <span class="demo-chip is-active text-xs rounded-full px-2.5 py-1">Transcripción</span>
-              <span class="demo-chip is-active text-xs rounded-full px-2.5 py-1">Descripción</span>
-            </div>
-          </article>
-
-          <article class="card rounded-2xl p-4">
-            <div class="text-xs text-primary-600 font-semibold uppercase tracking-wide">Paso 3</div>
-            <h3 class="mt-2 font-semibold text-text">Resultado</h3>
-            <p class="mt-2 text-sm text-text2">Mismo contenido, mejor estructura para leer, estudiar o ejecutar.</p>
-            <div class="mt-3 inline-flex items-center gap-2 rounded-full bg-success-100 text-green-700 px-3 py-1 text-xs font-medium">
-              <span class="h-1.5 w-1.5 rounded-full bg-success-600"></span>Procesado
-            </div>
-          </article>
-        </div>
-
-        <div class="mt-6 rounded-2xl border border-border bg-surface p-4 sm:p-5">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div class="flex items-center gap-2 text-sm text-text2">
-              <span class="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-primary-100 text-primary-600">✦</span>
-              Formatted Text Demo
-            </div>
-            <div class="toggle-pill inline-flex p-1 rounded-full w-full sm:w-auto" role="tablist" aria-label="Modo de visualización">
-              <button type="button" class="toggle-option rounded-full px-3 py-1.5 text-sm font-medium" data-view="original" aria-pressed="true">Original</button>
-              <button type="button" class="toggle-option rounded-full px-3 py-1.5 text-sm font-medium" data-view="formatted" aria-pressed="false">Formateado</button>
-              <button type="button" class="toggle-option rounded-full px-3 py-1.5 text-sm font-medium" data-view="both" aria-pressed="false">Ambos</button>
-            </div>
-          </div>
-
-          <div class="mt-4 grid gap-4 lg:grid-cols-2" id="share-views">
-            <article class="share-panel rounded-2xl border border-border bg-[#fbfbfc] p-4" data-panel="original">
-              <h4 class="text-sm font-semibold text-text">Texto original (caótico)</h4>
-              <p class="mt-3 text-sm text-text2 leading-relaxed">
-                video: pasta cremosa sin horno super rápida para cena. descripción: pasta corta 320 g crema de leche 250 ml parmesano media taza ajo 2 dientes espinaca un puñado sal pimienta aceite oliva. en el audio digo: calienta sartén añade aceite y ajo cuando huela bien agrega crema parmesano sal pimienta mezcla hasta espesar añade pasta cocida y un poco de agua de cocción después incorpora espinaca 1 minuto y apaga. opcional ralladura de limón. tiempo total 18 min rinde 2 porciones.
-              </p>
-            </article>
-
-            <article class="share-panel formatted-app rounded-2xl p-4" data-panel="formatted" hidden>
-              <div class="flex items-center justify-between gap-2">
-                <h4 class="text-sm font-semibold text-text">Formatted Text</h4>
-                <span class="rounded-full bg-primary-100 text-primary-600 px-2.5 py-1 text-xs font-medium">Sin reescritura</span>
-              </div>
-
-              <div class="mt-3 text-sm text-text2 space-y-3 leading-relaxed">
-                <div>
-                  <p class="text-xs uppercase tracking-wide text-text3">Título</p>
-                  <p>pasta cremosa sin horno super rápida para cena</p>
-                </div>
-                <div>
-                  <p class="text-xs uppercase tracking-wide text-text3">Descripción</p>
-                  <p>video: pasta cremosa sin horno super rápida para cena.</p>
-                </div>
-                <div>
-                  <p class="text-xs uppercase tracking-wide text-text3">Ingredientes</p>
-                  <ul class="list-disc pl-5">
-                    <li>pasta corta 320 g</li>
-                    <li>crema de leche 250 ml</li>
-                    <li>parmesano media taza</li>
-                    <li>ajo 2 dientes</li>
-                    <li>espinaca un puñado</li>
-                    <li>sal pimienta aceite oliva</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="text-xs uppercase tracking-wide text-text3">Pasos</p>
-                  <ol class="list-decimal pl-5 space-y-1">
-                    <li>calienta sartén añade aceite y ajo</li>
-                    <li>cuando huela bien agrega crema parmesano sal pimienta mezcla hasta espesar</li>
-                    <li>añade pasta cocida y un poco de agua de cocción</li>
-                    <li>después incorpora espinaca 1 minuto y apaga</li>
-                  </ol>
-                </div>
-                <div>
-                  <p class="text-xs uppercase tracking-wide text-text3">Tips</p>
-                  <p>opcional ralladura de limón</p>
-                </div>
-                <div class="flex gap-3 text-xs">
-                  <span class="demo-chip rounded-full px-2.5 py-1">tiempo total 18 min</span>
-                  <span class="demo-chip rounded-full px-2.5 py-1">rinde 2 porciones</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="mt-16">
-      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-text">Features que importan (MVP sin drama)</h2>
-      <p class="mt-3 text-text2 max-w-2xl">Diseñado para que la API siempre responda rápido y lo pesado ocurra en background. Ideal para 3–10 usuarios mientras afinamos.</p>
-
-      <div class="mt-8 grid md:grid-cols-3 gap-4">
-        <div class="card rounded-3xl p-6">
-          <div class="text-sm font-semibold text-text">Ingestión universal</div>
-          <p class="mt-2 text-sm text-text2">Links, PDFs, imágenes, audio. Guardas primero, procesas después.</p>
-        </div>
-        <div class="card rounded-3xl p-6">
-          <div class="text-sm font-semibold text-text">Procesamiento en background</div>
-          <p class="mt-2 text-sm text-text2">Celery + colas: la app no se congela aunque estés transcribiendo.</p>
-        </div>
-        <div class="card rounded-3xl p-6">
-          <div class="text-sm font-semibold text-text">Offline real</div>
-          <p class="mt-2 text-sm text-text2">Búsqueda local, caché de contenido y sync inteligente.</p>
-        </div>
-      </div>
-
-      <div class="mt-4 grid md:grid-cols-2 gap-4">
-        <div class="card rounded-3xl p-6">
-          <div class="text-sm font-semibold text-text">Transcripción + resumen</div>
-          <p class="mt-2 text-sm text-text2">Convierte material largo en puntos accionables. Ideal para estudio y trabajo.</p>
-        </div>
-        <div class="card rounded-3xl p-6">
-          <div class="text-sm font-semibold text-text">Tu conocimiento, tu estructura</div>
-          <p class="mt-2 text-sm text-text2">Etiquetas, favoritos, colecciones. Sin imponer un sistema raro.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="mt-16">
-      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-text">Cómo funciona</h2>
-      <div class="mt-8 grid lg:grid-cols-3 gap-4">
-        <div class="card rounded-3xl p-6">
-          <div class="text-xs text-text3">01</div>
-          <div class="mt-2 font-semibold text-text">Guarda</div>
-          <p class="mt-2 text-sm text-text2">Desde iOS/Android/Web: comparte o arrastra.</p>
-        </div>
-        <div class="card rounded-3xl p-6">
-          <div class="text-xs text-text3">02</div>
-          <div class="mt-2 font-semibold text-text">Procesa</div>
-          <p class="mt-2 text-sm text-text2">El worker hace lo pesado: descarga, OCR, ffmpeg, transcribe.</p>
-        </div>
-        <div class="card rounded-3xl p-6">
-          <div class="text-xs text-text3">03</div>
-          <div class="mt-2 font-semibold text-text">Encuentra</div>
-          <p class="mt-2 text-sm text-text2">Busca por texto, tags, resumen o idioma, incluso offline.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="waitlist" class="mt-16">
-      <div class="card rounded-3xl p-8 md:p-10">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <h3 class="text-2xl font-semibold tracking-tight text-text">¿Te doy acceso?</h3>
-            <p class="mt-2 text-text2">Déjame tu correo. Te mando el link del TestFlight y la demo web cuando estén listos.</p>
-          </div>
-          <form id="waitlist-form" class="w-full md:w-auto">
-            <div class="flex flex-col sm:flex-row gap-3">
-              <input required type="email" placeholder="tu@correo.com" class="w-full sm:w-80 rounded-2xl px-4 py-3 bg-surface stroke text-text placeholder:text-text3 focus:outline-none focus:ring-2 focus:ring-primary-500/55" />
-              <button class="rounded-2xl px-5 py-3 font-semibold bg-primary-600 hover:bg-primary-500 text-white">Unirme</button>
-            </div>
-            <p id="thanks" class="mt-3 text-sm text-text2 hidden">Listo. Te aviso pronto. ✉️</p>
-            <p class="mt-2 text-xs text-text3">Sin spam. Solo lanzamientos y acceso.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="mt-16 pb-14">
-      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-text">FAQ</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-4">
-        <details class="card rounded-3xl p-6">
-          <summary class="cursor-pointer font-semibold text-text">¿Esto es seguro?</summary>
-          <p class="mt-3 text-sm text-text2">La idea es que el contenido sea tuyo. Empezamos simple y robusto; luego añadimos cifrado por archivo y opciones avanzadas.</p>
-        </details>
-        <details class="card rounded-3xl p-6">
-          <summary class="cursor-pointer font-semibold text-text">¿Funciona offline?</summary>
-          <p class="mt-3 text-sm text-text2">Sí: cache local + búsqueda local. El sync se encarga cuando vuelve el internet.</p>
-        </details>
-        <details class="card rounded-3xl p-6">
-          <summary class="cursor-pointer font-semibold text-text">¿Qué tan rápido es?</summary>
-          <p class="mt-3 text-sm text-text2">La API responde rápido porque solo encola trabajos. El worker procesa y actualiza el estado.</p>
-        </details>
-        <details class="card rounded-3xl p-6">
-          <summary class="cursor-pointer font-semibold text-text">¿Cuándo sale?</summary>
-          <p class="mt-3 text-sm text-text2">MVP primero. Luego iteramos con usuarios reales (como debe ser).</p>
-        </details>
-      </div>
-    </section>
+    <section id="how" class="mt-10 sm:mt-20"><div class="section-kicker">Captura en segundos</div><div class="mt-3 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4"><h2 class="section-title">Todo entra a Vault sin fricción.</h2><p class="section-copy">Comparte, pega, sube o dicta. La app guarda primero y procesa después para que nunca pierdas una idea.</p></div><div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4"><article class="feature-card"><span>🔗</span><h3>Enlaces</h3><p>Guarda videos, páginas y contenido que normalmente se pierde entre pestañas.</p></article><article class="feature-card"><span>□</span><h3>Archivos</h3><p>PDFs, imágenes y documentos listos para lectura, OCR y búsqueda.</p></article><article class="feature-card"><span>✎</span><h3>Texto</h3><p>Notas rápidas, ideas, recetas, frases y pendientes con estructura limpia.</p></article><article class="feature-card"><span>🎙</span><h3>Audio</h3><p>Convierte voz y audios largos en texto consultable y reutilizable.</p></article></div></section>
+    <section id="features" class="mt-24"><div class="grid lg:grid-cols-[.9fr_1.1fr] gap-8 items-center"><div><div class="section-kicker">Biblioteca inteligente</div><h2 class="section-title mt-3">Tu contenido, ordenado por contexto.</h2><p class="section-copy mt-4">Vault no solo guarda: convierte tu contenido en una biblioteca viva. Puedes tener categorías generales, colecciones personales y tarjetas limpias que se sienten como una biblioteca real.</p></div><div class="vault-board"><div class="board-card wide"><span>▦</span><b>130</b><h3>Todos</h3><p>Todo lo guardado en tu bóveda.</p></div><div class="board-card"><span>📖</span><b>14</b><h3>Reflexiones</h3><p>Frases, enseñanzas e historias.</p></div><div class="board-card"><span>✦</span><b>10</b><h3>Ideas</h3><p>Proyectos, inspiración y creatividad.</p></div><div class="board-card"><span>↗</span><b>3</b><h3>Finanzas</h3><p>Dinero, negocios e inversiones.</p></div><div class="board-card"><span>🍣</span><b>21</b><h3>Recetas</h3><p>Ingredientes, pasos y cocina.</p></div></div></div></section>
+    <section id="chat" class="mt-24"><div class="glass-panel rounded-[2.5rem] p-6 sm:p-8 lg:p-10 overflow-hidden"><div class="grid lg:grid-cols-2 gap-8 items-center"><div><div class="section-kicker">Vault AI</div><h2 class="section-title mt-3">Pregúntale a tu propia bóveda.</h2><p class="section-copy mt-4">Haz preguntas sobre lo que ya guardaste. Vault busca en tus textos, encuentra contexto y te devuelve una respuesta útil sin obligarte a recordar dónde lo viste.</p><div class="mt-6 grid gap-3"><div class="prompt-chip">“¿Qué recetas guardé con salmón?”</div><div class="prompt-chip">“Resume mis notas sobre finanzas.”</div><div class="prompt-chip">“Encuentra ese video sobre disciplina.”</div></div></div><div class="chat-window"><div class="chat-title"><img src="/assets/icons/favicon.png" alt="" /><div><strong>Vault AI</strong><p><span></span> Conectado a tu bóveda</p></div></div><div class="message ai">Pregúntame algo sobre lo que ya guardaste. Puedo buscar en tus textos y ayudarte a guardar la conclusión como una nueva nota.</div><div class="message user">¿Qué guardé sobre recetas con atún?</div><div class="message ai answer">Encontré una receta de crispy sushi rice con spicy tuna tartar. Incluye arroz estilo sushi, atún fresco, soya, mayonesa, sriracha y aceite de ajonjolí.</div></div></div></div></section>
+    <section id="read" class="mt-24"><div class="section-kicker">Lee mejor</div><h2 class="section-title mt-3">Resumen, traducción y original en el mismo lugar.</h2><p class="section-copy mt-4 max-w-3xl">Cuando abres una nota, Vault te deja alternar entre IA, resumen y texto original. También puedes traducir, copiar, compartir y volver a la fuente.</p><div class="mt-8 reading-card"><div class="reading-toolbar"><span>▣ Traducir</span><span>🔗 Ver original</span><span>⇧</span><span>▱＋</span></div><div class="segmented"><span class="active">IA</span><span>Resumen</span><span>Original</span></div><div class="reading-content"><div class="reading-label">🌐 Traducción <b>Original</b></div><h3>Crispy Sushi Rice with Spicy Tuna Tartar</h3><h4>Ingredients</h4><p>• Cooked rice (sushi style)</p><p>• Fresh tuna (chopped tartar style)</p><h4>For the tartar dressing:</h4><p>• 2 tablespoons of soy sauce</p><p>• 2 tablespoons of mayonnaise</p><p>• 1 tablespoon of sriracha</p></div></div></section>
+    <section id="waitlist" class="mt-24 pb-10"><div class="cta-panel text-center"><div class="mx-auto h-16 w-16 rounded-[1.4rem] overflow-hidden shadow-soft"><img src="/assets/icons/favicon.png" alt="Vault" class="h-full w-full object-cover" /></div><h2 class="mt-6 text-4xl sm:text-5xl font-semibold tracking-[-0.045em]">Empieza a construir tu segunda memoria.</h2><p class="mt-4 mx-auto max-w-2xl text-text2 text-lg">Vault está hecho para guardar lo importante antes de que internet se lo lleve. Tus enlaces, notas, audios y archivos, convertidos en conocimiento consultable.</p><form id="waitlist-form" class="mt-7 mx-auto max-w-xl"><div class="glass-input-wrap"><input required type="email" placeholder="tu@correo.com" /><button>Unirme</button></div><p id="thanks" class="mt-3 text-sm text-text2 hidden">Listo. Te aviso pronto. ✉️</p><p class="mt-2 text-xs text-text3">Sin spam. Solo acceso y novedades de Vault.</p></form></div></section>
   </main>
-
   <div id="site-footer"></div>
 </body>
 </html>
